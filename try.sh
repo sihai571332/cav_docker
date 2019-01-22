@@ -1,4 +1,11 @@
-#!/bin/sh
+#!/bin/bash
+ips=($(hostname -I))
+
+for ip in "${ips[@]}"
+do
+	echo $ip
+done
+
 docker build -t cav/hello . 
 cd .. 
 ls
