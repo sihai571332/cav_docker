@@ -1,5 +1,6 @@
 FROM golang:1.11-alpine AS builder
 
+RUN apk add build-base
 ADD . /src
 RUN cd /src \
  && go build -o hello
